@@ -1,6 +1,6 @@
 # L3 Data Science Course Project
 
-This repository contains all project files for the Level 3 Data Science Course, including data, Python scripts, output files, visualizations, and documentation.
+This repository contains all project files for the Level 3 Data Science Course (NCFE Level 3 Certificate in Data (603/7882/7) - Guildhall, City of London Certification), including data, Python scripts, output files, visualizations, and documentation.
 
 ## Learning Outcomes
 
