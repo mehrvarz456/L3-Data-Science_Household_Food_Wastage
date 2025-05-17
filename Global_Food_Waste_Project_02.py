@@ -1,9 +1,6 @@
 # This Python 3 environment comes with many helpful analytics libraries installed
-# It is defined by the kaggle/python Docker image: https://github.com/kaggle/docker-python
-# For example, here's several helpful packages to load
-#-----------------------------------------------------------------------------------------
 # Read and Analyse Data
-
+#-----------------------------------------------------------------------------------------
 import os
 import pandas as pd
 
@@ -224,15 +221,14 @@ plt.title("Total Waste by Food Category", fontsize=16, fontweight="bold", color=
 plt.xlabel("Total Waste (Tons)", fontsize=14, fontweight="bold", color="gray")
 plt.ylabel("Food Category", fontsize=14, fontweight="bold", color="gray")
 
-
 plt.grid(True)
 plt.show()
+
 ### HeatMap
 #==================================================================================
 from sklearn.preprocessing import LabelEncoder
 
 df_encoded = df.copy()
-
 
 for col in df.select_dtypes(include=["object"]).columns:
     df_encoded[col] = LabelEncoder().fit_transform(df[col])
@@ -327,7 +323,7 @@ def detect_outliers(df, method="IQR", threshold=1.5, scale_data=True):
 
         outlier_dict[col] = outliers[col].values
 
-    # Combined boxplot
+    ## Combined boxplot
     plt.figure(figsize=(16, 9))
     sns.boxplot(data=df_scaled, orient="h", color="lightblue")  # <-- all dark blue initially
     plt.title("Outliers Across All Numeric Columns (Scaled)", fontsize=18)
