@@ -242,7 +242,7 @@ plt.show()
 
 #==================================================================================
 
-### Outlier Analysis
+### Outlier Analysis # Ignore individual outlier as it is now combined into one graph
 #-----------------------------------------------------------------------------------
 import numpy as np
 
@@ -376,7 +376,7 @@ outlier_table = create_outlier_table(df, method="IQR", threshold=1.5)
 # View it
 outlier_table.head(10)  # Show first 10 rows
 
-#=============
+#==============================================================================
 
 # STEP 1: Create the outlier table
 #outlier_table = create_outlier_table(df, method="IQR", threshold=1.5)
@@ -519,16 +519,16 @@ fig, ax1 = plt.subplots(figsize=(10, 6))
 ax2 = ax1.twinx()  # Create a second y-axis for R²
 
 # Plot MSE on the left y-axis
-bar1 = ax1.bar(x - width/2, mse_values, width, label='MSE', color='red')
+bar1 = ax1.bar(x - width/2, mse_values, width, label='MSE', color='red') # ignore this output
 ax1.set_ylabel('Mean Squared Error')
 ax1.set_ylim(0, max(mse_values) * 1.1)
 
 # Plot R² on the right y-axis
-bar2 = ax2.bar(x + width/2, r2_values, width, label='R² Score', color='green')
+bar2 = ax2.bar(x + width/2, r2_values, width, label='R² Score', color='green') # ignore this output
 ax2.set_ylabel('R² Score')
 ax2.set_ylim(0, 1.05)
 
-# Add titles and labels
+# Add titles and labels # ignore this graph
 plt.title('Model Performance Comparison')
 ax1.set_xticks(x)
 ax1.set_xticklabels(models)
@@ -554,6 +554,7 @@ plt.savefig(plot_path)
 plt.show()
 
 #===========================================================================
+# Updated model outputs
 #===========================================================================
 
 import matplotlib.pyplot as plt
