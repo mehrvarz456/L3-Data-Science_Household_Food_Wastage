@@ -34,10 +34,10 @@ from io import BytesIO
 from PIL import Image
 
 # Path to the local image
-image_path = r"C:\Users\admin\Python Programming\WEEK_5\hfcqdun.PNG"
+#image_path = r"C:\Users\admin\Python Programming\WEEK_5\hfcqdun.PNG"
 
 # Open the image directly from the local file path
-img = Image.open(image_path)
+#img = Image.open(image_path)
 
 
 ### Missing Value and Unique Counts Analysis
